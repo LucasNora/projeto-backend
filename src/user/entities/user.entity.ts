@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm"
 import { Task } from "src/task/entities/task.entity";
 
 @Entity()
-export class User {
+export class UserEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -23,6 +23,7 @@ export class User {
 
     @OneToMany(() => Task, (task) => task.user)
     task: Task[];
+    profileImageUrl: any;
 
 
 
